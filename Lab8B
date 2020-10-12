@@ -1,0 +1,31 @@
+/*
+Lab8B
+Section 16
+Indiana Jones
+*/
+
+
+#include <iostream>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+using namespace std;
+int main() {
+ int tar;
+ fstream fs;
+ fs.open("input.txt", fstream::in);
+ for (int i = 0; i < 10; i++) {
+ fs >> tar;
+ cout << tar << "|";
+ }
+ fs.close();
+ cout << endl;
+ fs.open("output.txt", fstream::out);
+ for (int i = 0; i < 10; i++) {
+ fs << i << " ";
+ }
+ fs << endl;
+ fs.close();
+
+ cin >> tar;
+}
